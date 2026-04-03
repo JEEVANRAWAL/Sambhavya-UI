@@ -1,0 +1,548 @@
+@font-face {
+  font-family: 'healingy';
+  src:  url('../fonts/healingydf67.eot?4750hs');
+  src:  url('../fonts/healingydf67.eot?4750hs#iefix') format('embedded-opentype'),
+    url('../fonts/healingydf67.ttf?4750hs') format('truetype'),
+    url('../fonts/healingydf67.woff?4750hs') format('woff'),
+    url('../fonts/healingydf67.svg?4750hs#healingy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-healingy-"], [class*=" icon-healingy-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'healingy' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-healingy-thumb-tack:before {
+  content: "\e97c";
+}
+.icon-healingy-toggle-on:before {
+  content: "\e97a";
+}
+.icon-healingy-toggle-off:before {
+  content: "\e97b";
+}
+.icon-healingy-slack:before {
+  content: "\e928";
+}
+.icon-healingy-digg:before {
+  content: "\e96f";
+}
+.icon-healingy-bitcoin:before {
+  content: "\e970";
+}
+.icon-healingy-btc:before {
+  content: "\e970";
+}
+.icon-healingy-play:before {
+  content: "\e97d";
+}
+.icon-healingy-dribbble:before {
+  content: "\e971";
+}
+.icon-healingy-brand:before {
+  content: "\e971";
+}
+.icon-healingy-social:before {
+  content: "\e971";
+}
+.icon-healingy-steam:before {
+  content: "\e972";
+}
+.icon-healingy-brand1:before {
+  content: "\e972";
+}
+.icon-healingy-social1:before {
+  content: "\e972";
+}
+.icon-healingy-stackoverflow:before {
+  content: "\e973";
+}
+.icon-healingy-brand2:before {
+  content: "\e973";
+}
+.icon-healingy-social2:before {
+  content: "\e973";
+}
+.icon-healingy-spotify:before {
+  content: "\e974";
+}
+.icon-healingy-brand3:before {
+  content: "\e974";
+}
+.icon-healingy-social3:before {
+  content: "\e974";
+}
+.icon-healingy-behance:before {
+  content: "\e975";
+}
+.icon-healingy-brand4:before {
+  content: "\e975";
+}
+.icon-healingy-social4:before {
+  content: "\e975";
+}
+.icon-healingy-vimeo:before {
+  content: "\e976";
+}
+.icon-healingy-brand5:before {
+  content: "\e976";
+}
+.icon-healingy-social5:before {
+  content: "\e976";
+}
+.icon-healingy-youtube:before {
+  content: "\e977";
+}
+.icon-healingy-brand6:before {
+  content: "\e977";
+}
+.icon-healingy-social6:before {
+  content: "\e977";
+}
+.icon-healingy-pinterest:before {
+  content: "\e978";
+}
+.icon-healingy-brand7:before {
+  content: "\e978";
+}
+.icon-healingy-social7:before {
+  content: "\e978";
+}
+.icon-healingy-google-plus:before {
+  content: "\e979";
+}
+.icon-healingy-HandHeart:before {
+  content: "\e90a";
+}
+.icon-healingy-icon1:before {
+  content: "\e90b";
+}
+.icon-healingy-icon2:before {
+  content: "\e90c";
+}
+.icon-healingy-icon3:before {
+  content: "\e90d";
+}
+.icon-healingy-icon4:before {
+  content: "\e913";
+}
+.icon-healingy-icon5:before {
+  content: "\e914";
+}
+.icon-healingy-icon6:before {
+  content: "\e915";
+}
+.icon-healingy-icon7:before {
+  content: "\e917";
+}
+.icon-healingy-icon8:before {
+  content: "\e923";
+}
+.icon-healingy-cart:before {
+  content: "\e900";
+}
+.icon-healingy-chat:before {
+  content: "\e901";
+}
+.icon-healingy-chat-box:before {
+  content: "\e902";
+}
+.icon-healingy-check:before {
+  content: "\e903";
+}
+.icon-healingy-check2:before {
+  content: "\e904";
+}
+.icon-healingy-chev-left:before {
+  content: "\e905";
+}
+.icon-healingy-chev-right:before {
+  content: "\e906";
+}
+.icon-healingy-date:before {
+  content: "\e907";
+}
+.icon-healingy-date2:before {
+  content: "\e908";
+}
+.icon-healingy-facebook:before {
+  content: "\e909";
+}
+.icon-healingy-instagram:before {
+  content: "\e90e";
+}
+.icon-healingy-Lifebuoy:before {
+  content: "\e90f";
+}
+.icon-healingy-linkedin2:before {
+  content: "\e910";
+}
+.icon-healingy-mail:before {
+  content: "\e911";
+}
+.icon-healingy-map:before {
+  content: "\e912";
+}
+.icon-healingy-Minus:before {
+  content: "\e916";
+}
+.icon-healingy-paper-plane:before {
+  content: "\e918";
+}
+.icon-healingy-phone:before {
+  content: "\e919";
+}
+.icon-healingy-Plus:before {
+  content: "\e91a";
+}
+.icon-healingy-right:before {
+  content: "\e91b";
+}
+.icon-healingy-right1:before {
+  content: "\e91c";
+}
+.icon-healingy-search:before {
+  content: "\e91d";
+}
+.icon-healingy-sent:before {
+  content: "\e91e";
+}
+.icon-healingy-settings:before {
+  content: "\e91f";
+}
+.icon-healingy-SketchLogo:before {
+  content: "\e920";
+}
+.icon-healingy-skype:before {
+  content: "\e921";
+}
+.icon-healingy-start:before {
+  content: "\e922";
+}
+.icon-healingy-time:before {
+  content: "\e924";
+}
+.icon-healingy-twitter:before {
+  content: "\e925";
+}
+.icon-healingy-up:before {
+  content: "\e926";
+}
+.icon-healingy-user:before {
+  content: "\e927";
+}
+.icon-healingy-family:before {
+  content: "\e929";
+}
+.icon-healingy-love:before {
+  content: "\e92a";
+}
+.icon-healingy-briefcase:before {
+  content: "\e92b";
+}
+.icon-healingy-radiation:before {
+  content: "\e92c";
+}
+.icon-healingy-ecotherapy:before {
+  content: "\e92d";
+}
+.icon-healingy-psychology:before {
+  content: "\e92e";
+}
+.icon-healingy-psychology1:before {
+  content: "\e92f";
+}
+.icon-healingy-pendulum:before {
+  content: "\e930";
+}
+.icon-healingy-thalassotherapy:before {
+  content: "\e931";
+}
+.icon-healingy-radiotherapy:before {
+  content: "\e932";
+}
+.icon-healingy-organic:before {
+  content: "\e933";
+}
+.icon-healingy-health:before {
+  content: "\e934";
+}
+.icon-healingy-mind:before {
+  content: "\e935";
+}
+.icon-healingy-consultation:before {
+  content: "\e936";
+}
+.icon-healingy-dropper:before {
+  content: "\e937";
+}
+.icon-healingy-cryotherapy:before {
+  content: "\e938";
+}
+.icon-healingy-music-therapy:before {
+  content: "\e939";
+}
+.icon-healingy-positive:before {
+  content: "\e93a";
+}
+.icon-healingy-lotus:before {
+  content: "\e93b";
+}
+.icon-healingy-rest:before {
+  content: "\e93c";
+}
+.icon-healingy-stethoscope:before {
+  content: "\e93d";
+}
+.icon-healingy-group-therapy:before {
+  content: "\e93e";
+}
+.icon-healingy-wellness:before {
+  content: "\e93f";
+}
+.icon-healingy-electrocardiogram:before {
+  content: "\e940";
+}
+.icon-healingy-support:before {
+  content: "\e941";
+}
+.icon-healingy-injection:before {
+  content: "\e942";
+}
+.icon-healingy-heart:before {
+  content: "\e943";
+}
+.icon-healingy-aromatherapy:before {
+  content: "\e944";
+}
+.icon-healingy-negative-thinking:before {
+  content: "\e945";
+}
+.icon-healingy-balance:before {
+  content: "\e946";
+}
+.icon-healingy-medical-test:before {
+  content: "\e947";
+}
+.icon-healingy-organic1:before {
+  content: "\e948";
+}
+.icon-healingy-talk:before {
+  content: "\e949";
+}
+.icon-healingy-organic2:before {
+  content: "\e94a";
+}
+.icon-healingy-chromotherapy:before {
+  content: "\e94b";
+}
+.icon-healingy-acupunture:before {
+  content: "\e94c";
+}
+.icon-healingy-mental-health:before {
+  content: "\e94d";
+}
+.icon-healingy-sauna:before {
+  content: "\e94e";
+}
+.icon-healingy-massage:before {
+  content: "\e94f";
+}
+.icon-healingy-pills:before {
+  content: "\e950";
+}
+.icon-healingy-pills1:before {
+  content: "\e951";
+}
+.icon-healingy-bamboo:before {
+  content: "\e952";
+}
+.icon-healingy-hot-stones:before {
+  content: "\e953";
+}
+.icon-healingy-apitherapy:before {
+  content: "\e954";
+}
+.icon-healingy-magnetotherapy:before {
+  content: "\e955";
+}
+.icon-healingy-massage1:before {
+  content: "\e956";
+}
+.icon-healingy-hospital:before {
+  content: "\e957";
+}
+.icon-healingy-divan:before {
+  content: "\e958";
+}
+.icon-healingy-art-therapy:before {
+  content: "\e959";
+}
+.icon-healingy-brain:before {
+  content: "\e95a";
+}
+.icon-healingy-essential:before {
+  content: "\e95b";
+  color: #646464;
+}
+.icon-healingy-herbal:before {
+  content: "\e95c";
+  color: #646464;
+}
+.icon-healingy-hula:before {
+  content: "\e95d";
+  color: #646464;
+}
+.icon-healingy-hypnosis:before {
+  content: "\e95e";
+  color: #646464;
+}
+.icon-healingy-lithotherapy:before {
+  content: "\e95f";
+  color: #646464;
+}
+.icon-healingy-mandala:before {
+  content: "\e960";
+  color: #646464;
+}
+.icon-healingy-physiotherapy:before {
+  content: "\e961";
+  color: #646464;
+}
+.icon-healingy-sauna1:before {
+  content: "\e962";
+  color: #646464;
+}
+.icon-healingy-spa1:before {
+  content: "\e962";
+  color: #646464;
+}
+.icon-healingy-therapy4:before {
+  content: "\e962";
+  color: #646464;
+}
+.icon-healingy-relax:before {
+  content: "\e962";
+  color: #646464;
+}
+.icon-healingy--wellness:before {
+  content: "\e963";
+  color: #646464;
+}
+.icon-healingy-yin:before {
+  content: "\e964";
+  color: #646464;
+}
+.icon-healingy-yang:before {
+  content: "\e964";
+  color: #646464;
+}
+.icon-healingy-balance1:before {
+  content: "\e964";
+  color: #646464;
+}
+.icon-healingy-zen:before {
+  content: "\e964";
+  color: #646464;
+}
+.icon-healingy-exercise:before {
+  content: "\e965";
+  color: #646464;
+}
+.icon-healingy-yoga2:before {
+  content: "\e966";
+  color: #646464;
+}
+.icon-healingy-relax1:before {
+  content: "\e966";
+  color: #646464;
+}
+.icon-healingy-exercise3:before {
+  content: "\e966";
+  color: #646464;
+}
+.icon-healingy-therapy7:before {
+  content: "\e966";
+  color: #646464;
+}
+.icon-healingy-acupuncture:before {
+  content: "\e967";
+  color: #646464;
+}
+.icon-healingy-cream:before {
+  content: "\e968";
+  color: #646464;
+}
+.icon-healingy-facial:before {
+  content: "\e969";
+  color: #646464;
+}
+.icon-healingy-herb:before {
+  content: "\e96a";
+  color: #646464;
+}
+.icon-healingy-herbal1:before {
+  content: "\e96b";
+  color: #646464;
+}
+.icon-healingy-mortar:before {
+  content: "\e96b";
+  color: #646464;
+}
+.icon-healingy-pestle:before {
+  content: "\e96b";
+  color: #646464;
+}
+.icon-healingy-medicine1:before {
+  content: "\e96b";
+  color: #646464;
+}
+.icon-healingy-lotus1:before {
+  content: "\e96c";
+  color: #646464;
+}
+.icon-healingy-therapy9:before {
+  content: "\e96c";
+  color: #646464;
+}
+.icon-healingy-meditation:before {
+  content: "\e96c";
+  color: #646464;
+}
+.icon-healingy-relax2:before {
+  content: "\e96c";
+  color: #646464;
+}
+.icon-healingy-meditation1:before {
+  content: "\e96d";
+  color: #646464;
+}
+.icon-healingy-therapy10:before {
+  content: "\e96d";
+  color: #646464;
+}
+.icon-healingy-relaxation:before {
+  content: "\e96d";
+  color: #646464;
+}
+.icon-healingy-yoga3:before {
+  content: "\e96d";
+  color: #646464;
+}
+.icon-healingy-supplement:before {
+  content: "\e96e";
+  color: #646464;
+}

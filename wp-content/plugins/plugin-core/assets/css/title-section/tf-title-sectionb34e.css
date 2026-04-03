@@ -1,0 +1,38 @@
+/*title section
+---------------------------------------------------------------- */
+.tf-title-section .title-section .sub-title {
+    position: relative;
+    margin-bottom: 12px;
+    color: var(--theme-primary-color);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-family: 'Archivo';
+    letter-spacing: 0.08em;
+}
+
+.tf-title-section .title-section .heading {
+    color: var(--theme-primary-color);
+    font-family: 'Archivo';
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 52px;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.tf-title-section .title-section .descrition {
+    font-family: 'Archivo';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #5E5A56;
+}
+
+
+@media (max-width: 767px) {
+    .tf-title-section .title-section .heading {
+        font-size: 35px;
+    }
+}

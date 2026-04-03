@@ -1,0 +1,442 @@
+:root {
+  --teal: #1a5c4f;
+  --teal-dark: #134339;
+  --teal-light: #eaf4f1;
+  --teal-mid: #2d7a6b;
+  --gold: #c8a84b;
+  --gold-light: #fdf6e3;
+  --text-dark: #1a2926;
+  --text-mid: #3d5450;
+  --text-light: #6b8c88;
+  --border: #dde8e6;
+  --bg: #ffffff;
+  --bg-soft: #f5faf9;
+  --white: #ffffff;
+  --radius: 14px;
+}
+
+/* ── HERO ─────────────────────────────────────── */
+.hero {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 48px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  background: var(--bg);
+}
+
+/* Left column */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--teal-light);
+  border: 1px solid #c0ddd8;
+  border-radius: 50px;
+  padding: 6px 14px;
+  width: fit-content;
+}
+.hero-eyebrow span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.hero-heading {
+  font-family: "Castoro", serif;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.1;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+.hero-heading em {
+  font-style: italic;
+  color: var(--teal);
+}
+
+.hero-subtext {
+  font-size: 18px;
+  color: var(--text-mid);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Therapy cards */
+.therapy-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.therapy-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.cards-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 150px;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 22px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(26, 92, 79, 0.06);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 92, 79, 0.06) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.card:hover {
+  border-color: var(--teal);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 92, 79, 0.14);
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--teal);
+}
+
+.card-type {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.card-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition:
+    opacity 0.2s,
+    right 0.2s;
+}
+.card:hover .card-arrow {
+  opacity: 1;
+  right: 14px;
+}
+.card-arrow svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--teal);
+}
+
+/* HSA badge */
+.hsa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fffbf0;
+  border: 1px solid #e8d89a;
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: fit-content;
+  text-decoration: none;
+}
+.hsa-badge svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--gold);
+  flex-shrink: 0;
+}
+.hsa-text {
+  font-size: 12.5px;
+  color: var(--text-mid);
+}
+.hsa-text strong {
+  color: #a07c20;
+  font-weight: 600;
+}
+
+/* Right column – illustration */
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.illustration-wrap {
+  position: relative;
+  width: 420px;
+  height: 420px;
+}
+
+/* Big circle backdrop */
+.bg-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 40% 35%,
+    var(--teal-light) 0%,
+    #d4ede9 55%,
+    transparent 75%
+  );
+  border: 1px solid #c0ddd8;
+}
+
+/* Floating therapist card */
+.therapist-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  padding: 24px 22px 20px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 16px 48px rgba(26, 92, 79, 0.12);
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translate(-50%, -52%);
+  }
+  50% {
+    transform: translate(-50%, -56%);
+  }
+}
+
+.therapist-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--teal-mid));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Castoro", serif;
+  font-size: 20px;
+  color: white;
+  border: 2px solid #c0ddd8;
+  flex-shrink: 0;
+}
+
+.therapist-info {
+  flex: 1;
+}
+.therapist-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.therapist-title {
+  font-size: 11.5px;
+  color: var(--text-light);
+}
+
+.online-dot-wrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.online-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c87a;
+  box-shadow: 0 0 0 3px rgba(34, 200, 122, 0.2);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 3px rgba(34, 200, 122, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(34, 200, 122, 0.08);
+  }
+}
+.online-label {
+  font-size: 11px;
+  color: #16a862;
+  font-weight: 500;
+}
+
+/* Stars */
+.stars {
+  display: flex;
+  gap: 3px;
+}
+.stars svg {
+  width: 13px;
+  height: 13px;
+  fill: var(--gold);
+}
+
+.specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  background: var(--teal-light);
+  border-radius: 50px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.match-btn {
+  display: block;
+  text-align: center;
+  background: var(--teal);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+.match-btn:hover {
+  background: var(--teal-mid);
+  transform: translateY(-1px);
+}
+
+/* Floating stats pills */
+.stat-pill {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 9px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(26, 92, 79, 0.1);
+  animation: floatPill 6s ease-in-out infinite;
+}
+.stat-pill.pill-1 {
+  bottom: 60px;
+  left: -10px;
+  animation-delay: 0s;
+}
+.stat-pill.pill-2 {
+  top: 55px;
+  right: -8px;
+  animation-delay: 2s;
+}
+
+@keyframes floatPill {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.pill-icon {
+  font-size: 18px;
+}
+.pill-text {
+  display: flex;
+  flex-direction: column;
+}
+.pill-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.pill-label {
+  font-size: 10px;
+  color: var(--text-light);
+}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px 60px;
+  }
+  .hero-right {
+    display: none;
+  }
+}

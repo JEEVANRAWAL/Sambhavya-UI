@@ -1,0 +1,190 @@
+.wrap-therapists-post .item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.wrap-therapists-post.column-1 .item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.wrap-therapists-post.column-3 .item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+.wrap-therapists-post.column-4 .item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.wrap-therapists-post.column-5 .item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.wrap-therapists-post.column-6 .item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.6666667%;
+    flex: 0 0 16.6666667%;
+    max-width: 16.6666667%;
+}
+
+.wrap-therapists-post .therapists-post .features-post {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.wrap-therapists-post .therapists-post .features-post img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    -webkit-transition: all 1s cubic-bezier(0.3, 1, 0.35, 1) 0s;
+    transition: all 1s cubic-bezier(0.3, 1, 0.35, 1) 0s;
+}
+.wrap-therapists-post .therapists-post:hover .features-post img {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.wrap-therapists-post .therapists-post .list-social {
+    list-style: none;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    transform: translateX(100%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.wrap-therapists-post .therapists-post:hover .list-social {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.wrap-therapists-post .therapists-post .list-social a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E4E4E4;
+    color: var(--theme-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.wrap-therapists-post .therapists-post .list-social a:hover {
+    background: var(--theme-primary-color);
+    color: var(--theme-secondary-color);
+    border-color: var(--theme-primary-color);
+}
+
+.wrap-therapists-post .therapists-post .title {
+    margin-bottom: -1px;
+    display: inline;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), color-stop(98%, currentColor));
+    background-image: linear-gradient(to bottom, currentColor 0%, currentColor 98%);
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: left 100%;    
+}
+.wrap-therapists-post .therapists-post .title:hover {
+    background-size: 100% 1px; 
+
+}
+
+.wrap-therapists-post .therapists-post .category-therapists a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #5E5A56;
+}
+
+.wrap-therapists-post .therapists-post .title a:hover {
+    color: var(--theme-primary-color); 
+}
+
+/* Responsive
+-------------------------------------------------------------- */
+
+@media only screen and (max-width: 991px) {
+
+    .wrap-therapists-post.column-4 .item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .wrap-therapists-post.column-5 .item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .wrap-therapists-post .item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 0 !important;
+    }
+
+    .wrap-therapists-post.column-3 .item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .wrap-therapists-post.column-4 .item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .wrap-therapists-post.column-5 .item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}

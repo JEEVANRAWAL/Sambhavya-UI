@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BetterHelp – You deserve to be happy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --teal: #1a5c4f;
+        --teal-dark: #134339;
+        --teal-light: #eaf4f1;
+        --gold: #c8a84b;
+        --gold-light: #fdf6e3;
+        --text-dark: #1a2926;
+        --text-mid: #3d5450;
+        --text-light: #5f7c78;
+        --white: #ffffff;
+        --radius: 12px;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--teal-dark);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ── NAV ─────────────────────────────────────── */
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 48px;
+        position: relative;
+        z-index: 10;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+        background: var(--gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: var(--teal-dark);
+      }
+      .logo-text {
+        font-family: "Castoro", serif;
+        font-size: 22px;
+        color: var(--white);
+        letter-spacing: 0.3px;
+      }
+
+      .nav-right {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .nav-link {
+        color: rgba(255, 255, 255, 0.82);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 6px 10px;
+        border-radius: 6px;
+        transition: color 0.2s;
+      }
+      .nav-link:hover {
+        color: var(--white);
+      }
+      .nav-btn {
+        background: var(--gold);
+        color: var(--teal-dark);
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 22px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+      .nav-btn:hover {
+        background: #d4b05a;
+        transform: translateY(-1px);
+      }
+
+      /* ── HERO ─────────────────────────────────────── */
+      .hero {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 48px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      /* Left column */
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50px;
+        padding: 6px 14px;
+        width: fit-content;
+      }
+      .hero-eyebrow span {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--gold);
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+      }
+      .eyebrow-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+      }
+
+      .hero-heading {
+        font-family: "Castoro", serif;
+        font-size: clamp(38px, 5vw, 62px);
+        line-height: 1.1;
+        color: var(--white);
+        letter-spacing: -0.5px;
+      }
+      .hero-heading em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .hero-subtext {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      /* Therapy cards */
+      .therapy-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .therapy-label {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.55);
+        margin-bottom: 4px;
+      }
+
+      .cards-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1;
+        min-width: 130px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1.5px solid rgba(255, 255, 255, 0.14);
+        border-radius: var(--radius);
+        padding: 18px 16px 16px;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          transform 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(200, 168, 75, 0.12) 0%,
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+      .card:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: var(--gold);
+        transform: translateY(-3px);
+      }
+      .card:hover::before {
+        opacity: 1;
+      }
+
+      .card-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(200, 168, 75, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6px;
+      }
+      .card-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: var(--gold);
+      }
+
+      .card-type {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--white);
+      }
+      .card-desc {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 400;
+      }
+
+      .card-arrow {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition:
+          opacity 0.2s,
+          right 0.2s;
+      }
+      .card:hover .card-arrow {
+        opacity: 1;
+        right: 12px;
+      }
+      .card-arrow svg {
+        width: 16px;
+        height: 16px;
+        fill: var(--gold);
+      }
+
+      /* HSA badge */
+      .hsa-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(200, 168, 75, 0.12);
+        border: 1px solid rgba(200, 168, 75, 0.35);
+        border-radius: 8px;
+        padding: 8px 14px;
+        width: fit-content;
+        text-decoration: none;
+      }
+      .hsa-badge svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--gold);
+        flex-shrink: 0;
+      }
+      .hsa-text {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .hsa-text strong {
+        color: var(--gold);
+        font-weight: 600;
+      }
+
+      /* Right column – illustration */
+      .hero-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .illustration-wrap {
+        position: relative;
+        width: 420px;
+        height: 420px;
+      }
+
+      /* Big circle backdrop */
+      .bg-circle {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 40% 35%,
+          rgba(200, 168, 75, 0.18) 0%,
+          rgba(26, 92, 79, 0.25) 55%,
+          transparent 75%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* Floating therapist card */
+      .therapist-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -52%);
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1.5px solid rgba(255, 255, 255, 0.18);
+        border-radius: 20px;
+        padding: 24px 22px 20px;
+        width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        animation: floatCard 5s ease-in-out infinite;
+      }
+
+      @keyframes floatCard {
+        0%,
+        100% {
+          transform: translate(-50%, -52%);
+        }
+        50% {
+          transform: translate(-50%, -56%);
+        }
+      }
+
+      .therapist-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #5b9e8f, #2d7a6b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Castoro", serif;
+        font-size: 20px;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        flex-shrink: 0;
+      }
+
+      .therapist-info {
+        flex: 1;
+      }
+      .therapist-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--white);
+      }
+      .therapist-title {
+        font-size: 11.5px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .online-dot-wrap {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .online-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #4cdf9c;
+        box-shadow: 0 0 0 3px rgba(76, 223, 156, 0.25);
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 3px rgba(76, 223, 156, 0.25);
+        }
+        50% {
+          box-shadow: 0 0 0 6px rgba(76, 223, 156, 0.1);
+        }
+      }
+      .online-label {
+        font-size: 11px;
+        color: #4cdf9c;
+        font-weight: 500;
+      }
+
+      /* Stars */
+      .stars {
+        display: flex;
+        gap: 3px;
+      }
+      .stars svg {
+        width: 13px;
+        height: 13px;
+        fill: var(--gold);
+      }
+
+      .specialties {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .tag {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50px;
+        padding: 4px 10px;
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .match-btn {
+        display: block;
+        text-align: center;
+        background: var(--gold);
+        color: var(--teal-dark);
+        font-size: 13px;
+        font-weight: 700;
+        padding: 11px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+      }
+      .match-btn:hover {
+        background: #d4b05a;
+        transform: translateY(-1px);
+      }
+
+      /* Floating stats pills */
+      .stat-pill {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        animation: floatPill 6s ease-in-out infinite;
+      }
+      .stat-pill.pill-1 {
+        bottom: 60px;
+        left: -10px;
+        animation-delay: 0s;
+      }
+      .stat-pill.pill-2 {
+        top: 55px;
+        right: -8px;
+        animation-delay: 2s;
+      }
+
+      @keyframes floatPill {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .pill-icon {
+        font-size: 18px;
+      }
+      .pill-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .pill-value {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--white);
+      }
+      .pill-label {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ── STATS BAR ───────────────────────────────── */
+      .stats-bar {
+        background: rgba(0, 0, 0, 0.25);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 22px 48px;
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+      }
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .stat-num {
+        font-family: "Castoro", serif;
+        font-size: 26px;
+        font-weight: 400;
+        color: var(--gold);
+      }
+      .stat-desc {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+        text-align: center;
+        max-width: 120px;
+      }
+      .stat-divider {
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
+        align-self: stretch;
+      }
+
+      /* ── RESPONSIVE ──────────────────────────────── */
+      @media (max-width: 860px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 40px 24px 60px;
+        }
+        .hero-right {
+          display: none;
+        }
+        nav {
+          padding: 16px 24px;
+        }
+        .nav-link {
+          display: none;
+        }
+        .stats-bar {
+          gap: 30px;
+          padding: 18px 24px;
+          flex-wrap: wrap;
+        }
+        .stat-divider {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </div>
+        <span class="logo-text">BetterHelp</span>
+      </a>
+
+      <div class="nav-right">
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">FAQ</a>
+        <a href="#" class="nav-link">Reviews</a>
+        <a href="#" class="nav-link">Log in</a>
+        <a href="#" class="nav-btn">Get started</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <!-- LEFT -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <div class="eyebrow-dot"></div>
+          <span>Trusted by 6M+ people worldwide</span>
+        </div>
+
+        <h1 class="hero-heading">You deserve<br />to be <em>happy.</em></h1>
+
+        <p class="hero-subtext">What type of therapy are you looking for?</p>
+
+        <div class="therapy-cards">
+          <p class="therapy-label">Choose your path</p>
+          <div class="cards-row">
+            <!-- Individual -->
+            <a href="#" class="card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"
+                  />
+                </svg>
+              </div>
+              <div class="card-type">Individual</div>
+              <div class="card-desc">For myself</div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Couples -->
+            <a href="#" class="card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                  />
+                </svg>
+              </div>
+              <div class="card-type">Couples</div>
+              <div class="card-desc">For me and my partner</div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+              </div>
+            </a>
+
+            <!-- Teen -->
+            <a href="#" class="card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 3C8.13 3 5 6.13 5 10c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-1.26c1.81-1.27 3-3.36 3-5.74 0-3.87-3.13-7-7-7zm1 13h-2v-1h2v1zm0-3H11v-1.08C9.28 11.5 8 9.88 8 8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.88-1.28 3.5-3 3.92V13z"
+                  />
+                </svg>
+              </div>
+              <div class="card-type">Teen</div>
+              <div class="card-desc">For my child</div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- HSA badge -->
+        <a href="#" class="hsa-badge">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"
+            />
+          </svg>
+          <span class="hsa-text"
+            >We accept <strong>HSA/FSA</strong> for Individual and Teen
+            therapy</span
+          >
+        </a>
+      </div>
+
+      <!-- RIGHT – illustration -->
+      <div class="hero-right">
+        <div class="illustration-wrap">
+          <div class="bg-circle"></div>
+
+          <!-- Therapist card -->
+          <div class="therapist-card">
+            <div class="therapist-header">
+              <div class="avatar">S</div>
+              <div class="therapist-info">
+                <div class="therapist-name">Dr. Sarah M., LPC</div>
+                <div class="therapist-title">
+                  Licensed Professional Counselor
+                </div>
+              </div>
+            </div>
+
+            <div class="online-dot-wrap">
+              <div class="online-dot"></div>
+              <span class="online-label">Available now</span>
+            </div>
+
+            <div class="stars">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                />
+              </svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                />
+              </svg>
+            </div>
+
+            <div class="specialties">
+              <span class="tag">Anxiety</span>
+              <span class="tag">Depression</span>
+              <span class="tag">Trauma</span>
+              <span class="tag">Relationships</span>
+            </div>
+
+            <a href="#" class="match-btn">Get matched →</a>
+          </div>
+
+          <!-- Floating pills -->
+          <div class="stat-pill pill-1">
+            <span class="pill-icon">🛡️</span>
+            <div class="pill-text">
+              <span class="pill-value">100% Confidential</span>
+              <span class="pill-label">Private & secure</span>
+            </div>
+          </div>
+
+          <div class="stat-pill pill-2">
+            <span class="pill-icon">⚡</span>
+            <div class="pill-text">
+              <span class="pill-value">Matched in 48hrs</span>
+              <span class="pill-label">Fast therapist match</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-num">31,000+</span>
+        <span class="stat-desc">Licensed therapists ready to help</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">6M+</span>
+        <span class="stat-desc">People have gotten help</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">468M+</span>
+        <span class="stat-desc">Messages, chats, audio & video sessions</span>
+      </div>
+    </div>
+  </body>
+</html>
