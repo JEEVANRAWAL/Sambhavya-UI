@@ -1,0 +1,19 @@
+:root {
+  --font-primary: "Nunito", sans-serif;
+  --font-heading: "Playfair Display", serif;
+}
+
+body {
+  font-family: var(--font-primary) !important;
+}
+
+nav ul li a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading) !important;
+  font-weight: 500 !important;
+}
